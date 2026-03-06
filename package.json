@@ -1,0 +1,53 @@
+{
+  "name": "@nolbase/dispatch",
+  "version": "1.0.0",
+  "description": "Official Node.js SDK for NolBase Dispatch - Transactional Email & SMS API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "nolbase",
+    "dispatch",
+    "email",
+    "sms",
+    "transactional",
+    "api",
+    "sdk"
+  ],
+  "author": "NolBase",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nolbase/email-sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/nolbase/email-sdk/issues"
+  },
+  "homepage": "https://nolbase.com/email-api",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.3.0",
+    "vitest": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
